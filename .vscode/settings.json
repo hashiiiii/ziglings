@@ -1,0 +1,5 @@
+{
+  "zig.buildOnSave": true,
+  "zig.path": "/${userHome}/.local/share/mise/installs/zig/0.14.1/bin/zig",
+  "zig.zls.path": "/${userHome}/.local/share/mise/installs/zls/0.14.0/zls",
+}
