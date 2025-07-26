@@ -15,7 +15,7 @@
 //
 const std = @import("std");
 
-const Insect = union(InsectStat) {
+const Insect = union(enum) {
     flowers_visited: u16,
     still_alive: bool,
 };
@@ -33,7 +33,7 @@ pub fn main() void {
 }
 
 fn printInsect(insect: Insect) void {
-    switch (insect) {
+    switch (insect) { // switch 文で使えるってだけなのかな？メリット
         .still_alive => |a| std.debug.print("Ant alive is: {}. ", .{a}),
         .flowers_visited => |f| std.debug.print("Bee visited {} flowers. ", .{f}),
     }
