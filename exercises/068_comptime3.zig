@@ -43,7 +43,11 @@ const Schooner = struct {
         //
         // Please change this so that it sets a 0 scale to 1
         // instead.
-        if (my_scale == 0) @compileError("Scale 1:0 is not valid!");
+        if (my_scale == 0) {
+            my_scale = 1;
+        } else {
+            @compileError("Scale 1:0 is not valid!");
+        }
 
         self.scale = my_scale;
         self.hull_length /= my_scale;
